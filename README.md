@@ -1,5 +1,7 @@
 # Youtube Downloader
 
+**[Download the latest version](../../releases/latest)**: get `YoutubeDownloaderSetup.exe` (installer) or `YoutubeDownloader.exe` (portable).
+
 An Apple-style YouTube downloader and file converter for Windows (C# + Avalonia).
 
 - **Download**: paste any YouTube link (video, Short, live, music, playlist). A YouTube link copied to the clipboard is filled in automatically when the app gets focus. A preview shows the title, channel, length and best available resolution.
