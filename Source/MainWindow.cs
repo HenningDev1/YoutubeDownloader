@@ -22,7 +22,7 @@ public sealed class MainWindow : Window
     {
         _settings = settings;
         Title = "Youtube Downloader";
-        Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://YoutubeDownloader/YoutubeDownloader.ico")));
+        Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://YoutubeDownloader/Assets/YoutubeDownloader.ico")));
         Width = settings.Width; Height = settings.Height;
         MinWidth = 760; MinHeight = 520;
         WindowStartupLocation = WindowStartupLocation.CenterScreen;

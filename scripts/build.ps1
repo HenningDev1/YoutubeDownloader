@@ -2,11 +2,12 @@
 # Both are the same self-contained single file: the PC needs no .NET installed.
 # Run the setup exe to install; it also accepts --install for a silent install.
 $ErrorActionPreference = 'Stop'
-Set-Location $PSScriptRoot
+$root = Split-Path $PSScriptRoot -Parent
+Set-Location $root
 
-if (-not (Test-Path 'YoutubeDownloader.ico')) { & (Join-Path $PSScriptRoot 'tools\make-icon.ps1') }
+if (-not (Test-Path 'Assets\YoutubeDownloader.ico')) { & (Join-Path $PSScriptRoot 'make-icon.ps1') }
 
-$out = Join-Path $PSScriptRoot 'publish'
+$out = Join-Path $root 'publish'
 if (Test-Path $out) { Remove-Item $out -Recurse -Force }
 dotnet publish YoutubeDownloader.csproj -c Release -r win-x64 --self-contained true `
     -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true `

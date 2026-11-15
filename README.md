@@ -17,9 +17,9 @@ Settings are saved in `%APPDATA%\YoutubeDownloader\settings.json`.
 ## Build
 
 ```bash
-powershell -ExecutionPolicy Bypass -File build.ps1
+powershell -ExecutionPolicy Bypass -File scripts/build.ps1
 ```
 
 This produces `publish\YoutubeDownloader.exe` (portable) and `publish\YoutubeDownloaderSetup.exe` (installer). Both are self-contained, so .NET doesn't need to be installed. The installer installs per user to `%LOCALAPPDATA%\Programs\Youtube Downloader` without admin rights, adds a Start Menu entry and an optional desktop shortcut, and registers an uninstaller under Settings › Apps.
 
-The icon is drawn by `tools\make-icon.ps1`.
+The icon is drawn by `scripts/make-icon.ps1`.

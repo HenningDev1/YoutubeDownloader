@@ -13,7 +13,7 @@ public sealed class SetupWindow : Window
     public SetupWindow()
     {
         Title = "Install Youtube Downloader";
-        Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://YoutubeDownloader/YoutubeDownloader.ico")));
+        Icon = new WindowIcon(AssetLoader.Open(new Uri("avares://YoutubeDownloader/Assets/YoutubeDownloader.ico")));
         Width = 460; Height = 350;
         CanResize = false;
         WindowStartupLocation = WindowStartupLocation.CenterScreen;

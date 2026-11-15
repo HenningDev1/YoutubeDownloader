@@ -1,4 +1,4 @@
-# Draws the Youtube Downloader app icon and writes YoutubeDownloader.ico (multi-size, PNG entries) + Assets\icon-256.png.
+# Draws the Youtube Downloader app icon and writes Assets/YoutubeDownloader.ico (multi-size, PNG entries) + Assets\icon-256.png.
 $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName System.Drawing
 $root = Split-Path $PSScriptRoot -Parent
@@ -84,5 +84,5 @@ for ($i = 0; $i -lt $sizes.Count; $i++) {
 }
 foreach ($p in $pngs) { $w.Write($p) }
 $w.Flush()
-[System.IO.File]::WriteAllBytes((Join-Path $root 'YoutubeDownloader.ico'), $out.ToArray())
+[System.IO.File]::WriteAllBytes((Join-Path $root 'Assets/YoutubeDownloader.ico'), $out.ToArray())
 Write-Output "Wrote YoutubeDownloader.ico"
